@@ -10,6 +10,8 @@ workdir: .
 # Commands to be run before executing the job.
 # Typical use: pip install -r requirements.txt, git clone, etc.
 setup: |
+  docker pull mosaicml/composer
+  docker run -it --name composer mosaicml/composer:latest
   sudo apt update
   sudo apt upgrade
   python3 -m venv falcon-venv

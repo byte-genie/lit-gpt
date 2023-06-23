@@ -1,0 +1,6 @@
+sky status ## check status of existing clusters
+sky stop cluster-id ## stop a cluster
+sky down cluster-id ## terminate a cluster
+sky launch -c cluster-id skypilot/yamls/falcon_finetuning.yaml ## launch cluster using a given .yaml file with a predifed cluster-id
+sky launch skypilot/yamls/generate_test.yaml ## launch cluster using a given .yaml file
+ssh clusder-id ## login to a cluster
