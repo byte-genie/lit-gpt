@@ -10,8 +10,10 @@ workdir: .
 # Commands to be run before executing the job.
 # Typical use: pip install -r requirements.txt, git clone, etc.
 setup: |
-  docker pull mosaicml/composer
-  docker run -it --name composer mosaicml/composer:latest
+#  docker pull mosaicml/composer
+#  docker run -it --name composer mosaicml/composer:latest
+  docker pull mosaicml/llm-foundry:2.0.1_cu118-latest
+  docker run -it --name llm mosaicml/llm-foundry:2.0.1_cu118-latest
   sudo apt update
   sudo apt -y upgrade
   python3 -m venv falcon-env
