@@ -51,7 +51,7 @@ hparams = {k: v for k, v in locals().items() if isinstance(v, (int, float, str))
 
 def setup(
     data_dir: Path = Path("data/alpaca"),
-    checkpoint_dir: Path = Path("checkpoints/stabilityai/stablelm-base-alpha-3b"),
+    checkpoint_dir: Path = Path("checkpoints/tiiuae/falcon-7b"),
     out_dir: Path = Path("out/adapter_v2/alpaca"),
     precision: Optional[str] = None,
     tpu: bool = False,
